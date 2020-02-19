@@ -28,7 +28,8 @@ std::string getVolumeFileSystemName(std::string diskName) {
 
 	if (!dataReceived) return "null";
 
-	std::cout << "Volume file system: " << lpVolumeNameBuffer << std::endl;
+	std::cout << "Volume name: " << lpVolumeNameBuffer << std::endl;
+	std::cout << "Volume file system: " << lpFileSystemNameBuffer << std::endl;
 
-	return lpVolumeNameBuffer;
+	return lpFileSystemNameBuffer;
 }
