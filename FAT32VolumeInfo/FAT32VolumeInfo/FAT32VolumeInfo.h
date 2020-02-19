@@ -8,3 +8,4 @@
 
 extern "C++" FAT32VOLUMEINFO_API void execute(std::string diskName);
 extern "C++" FAT32VOLUMEINFO_API std::string getVolumeFileSystemName(std::string diskName);
+extern "C++" FAT32VOLUMEINFO_API bool checkVolumeFS(std::string fsName);

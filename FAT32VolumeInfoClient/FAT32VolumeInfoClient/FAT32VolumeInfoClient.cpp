@@ -12,7 +12,7 @@ int main()
 	cout << "Please enter a volume letter: ";
 	diskName = cin.get();
 
-	string fsName = getVolumeFileSystemName(diskName);
+	execute(diskName);
 
 	cout << "Press Enter to exit";
 	cin.get();

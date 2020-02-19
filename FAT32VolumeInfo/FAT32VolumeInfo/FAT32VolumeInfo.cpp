@@ -6,6 +6,13 @@
 
 void execute(std::string diskName) {
 	std::string fsName = getVolumeFileSystemName(diskName);
+	if (checkVolumeFS(fsName)) {
+		std::cout << "Valid file system!" << std::endl;
+	}
+	else {
+		std::cout << "Invalid file system!" << std::endl;
+		return;
+	}
 }
 
 std::string getVolumeFileSystemName(std::string diskName) {
@@ -28,8 +35,13 @@ std::string getVolumeFileSystemName(std::string diskName) {
 
 	if (!dataReceived) return "null";
 
-	std::cout << "Volume name: " << lpVolumeNameBuffer << std::endl;
-	std::cout << "Volume file system: " << lpFileSystemNameBuffer << std::endl;
+	std::cout << "Volume name: " << lpVolumeNameBuffer << ";" << std::endl;
+	std::cout << "Volume file system: " << lpFileSystemNameBuffer << ";" << std::endl;
 
 	return lpFileSystemNameBuffer;
+}
+
+bool checkVolumeFS(std::string fsName) {
+	if (fsName.find("FAT32") == -1) return false;
+	return true;
 }
