@@ -83,8 +83,10 @@ bool getMBRData(std::string diskName, FAT32* volume) {
 
 
 
+
 //new change master
 //fix in develop
+//new change in feature 2
 
 void showFAT32MBR(FAT32 volume) {
 	printf("OEM in ASCII: %s\n", volume.OEM_ASCII);
