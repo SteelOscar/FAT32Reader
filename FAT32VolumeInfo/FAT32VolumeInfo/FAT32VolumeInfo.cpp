@@ -90,6 +90,8 @@ bool getMBRData(std::string diskName, FAT32* volume) {
 //fix in develop
 //new change in feature 2
 
+//some changes
+
 void showFAT32MBR(FAT32 volume) {
 	printf("OEM in ASCII: %s\n", volume.OEM_ASCII);
 	printf("The number of bytes in the sector: %d\n", volume.sectorSize);
